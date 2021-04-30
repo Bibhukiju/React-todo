@@ -1,0 +1,10 @@
+.todo-item {
+  background-color:wheat;
+  display: flex;
+  border: 1px solid red;
+  justify-content: space-between;
+  width: 500px;
+  align-items: center;
+  margin: 0.4rem auto;
+  padding: 0 1rem;
+}

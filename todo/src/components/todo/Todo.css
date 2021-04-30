@@ -1,0 +1,7 @@
+.todolist-board {
+    background-color: #ff5151;
+    padding: 1rem;
+    max-width: 750px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
