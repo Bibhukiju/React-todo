@@ -1,4 +1,5 @@
 import "./App.css";
+import NewTodoForm from "./components/NewTodo/NewTodoForm";
 import Todos from "./components/todo/Todo";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <div className="App">
         <h1>React Todo List </h1>
+        <NewTodoForm />
         <Todos />
       </div>
     </div>
