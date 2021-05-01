@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./NewTodoForm.css";
-const NewTodoForm = () => {
+const NewTodoForm = (props) => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const titleChangeHandler = (event) => {
@@ -11,23 +11,26 @@ const NewTodoForm = () => {
   };
   const addToList = () => {
     const obj = {
+      isCompleted: false,
       title,
       date,
     };
     console.log(obj);
     setTitle("");
     setDate("");
+    props.onAddTodo(obj);
   };
   return (
     <div className="form-container">
       <div className="inputDiv">
         <label>Title</label>
-        <input type="text" onChange={titleChangeHandler}></input>
+        <input type="text" onChange={titleChangeHandler} value={title}></input>
       </div>
       <div className="inputDiv">
         <label>Date</label>
         <input
           type="Date"
+          value={date}
           min="2019-01-01"
           max="2021-12-31"
           onChange={dateChangeHandler}
@@ -35,7 +38,6 @@ const NewTodoForm = () => {
       </div>
       <div className="btn">
         <button type="submit" onClick={addToList}>
-          {" "}
           Add To List
         </button>
       </div>

@@ -12,10 +12,12 @@ const TodoItem = (props) => {
   return (
     <div className="todo-item">
       <input type="checkbox"></input>
-      <h2>{title}</h2>
+      <div className="titleDiv">
+        <h2>{title}</h2>
+      </div>
       <div>
         <button onClick={changeTitle}>Edit</button>
-        <button onClick={deleteTodo}>Delete</button>  
+        <button onClick={deleteTodo}>Delete</button>
       </div>
     </div>
   );
